@@ -154,34 +154,62 @@ function generateItemCookHTML(item) {
   cookingListC.appendChild(row);
 }
 
+// calculate totalTiming and totalCooking
+
+
+
 function startCooking(itemId) {
   let index = totalCurrentlyCooking.indexOf(itemId);
   if (index !== -1) {
     totalCurrentlyCooking.splice(index, 1);
   }
-
-  totalCooking();
+  // totalCooking();
   displayCurrentlyCooking();
+  // displayCount();
   loadCurrentlyCooking();
+  loadTotalCount()
   displayCurrentlyCook();
+  totalCooking()
 }
+
+
+function   loadTotalCount(){
+  totalCountObject= totalCurrentlyCooking.map((itemId)=>{
+    for (let i = 0; i < items.length; i++) {
+      if (itemId == items[i].id) {
+        return items[i];
+      }
+    }
+  })
+  console.log(totalCountObject)
+}
+
 
 function totalCooking() {
   let TotalInfoElement = document.querySelector(".total-info");
 
-  let totalTiming = 0;
+ let totalTiming = 0;
   let totalCalories = 0;
+totalCountObject.forEach((totalCurrentlyCooking)=>{
+  totalTiming +=totalCurrentlyCooking.timing
+  totalCalories +=totalCurrentlyCooking.calories
+})
 
-  currentlyCookingObject.forEach((totalCurrentlyCooking) => {
-    totalTiming += totalCurrentlyCooking.timing;
-    totalCalories += totalCurrentlyCooking.calories;
-  });
+TotalInfoElement.innerHTML=`
+<p>Total Time = <span id="total-time">${totalTiming} minutes</span></p>
+ <p>Total Calories = <span id="total-calories">${totalCalories} calories</span></p>`
+ 
 
-  let totalTimeElement = document.getElementById("total-time");
-  let totalCaloriesElement = document.getElementById("total-calories");
+  // currentlyCookingObject.forEach((totalCurrentlyCooking) => {
+  //   totalTiming += totalCurrentlyCooking.timing;
+  //   totalCalories += totalCurrentlyCooking.calories;
+  // });
 
-  totalTimeElement.textContent = totalTiming;
-  totalCaloriesElement.textContent= totalCalories;
+  // let totalTimeElement = document.getElementById("total-time");
+  // let totalCaloriesElement = document.getElementById("total-calories");
+
+  // totalTimeElement.textContent = totalTiming;
+  // totalCaloriesElement.textContent= totalCalories;
 }
 
 
