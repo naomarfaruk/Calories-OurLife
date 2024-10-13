@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calories OurLife</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="main-logo">
+                <h1>Recipes</h1>
+                Calories
+            </div>
+            <div class="nav-bar">
+                <a href="#">Home</a>
+                <a href="#">Recipes</a>
+                <a href="#">About</a>
+                <a href="#">Search</a>
+            </div>
+            <div class="search-box">
+                <div class="search">
+                    <input type="text" placeholder="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div id="profile">
+                    <img class="profile" src="images/profile.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="overleyar"></div>
+        <div class="overwrite">
+            <h1>Discover an exceptional cooking
+                className tailored for you!</h1>
+            <p>Yes, you can run unit tests and view the results directly within the app. The integrated testing features
+                allow for a streamlined .</p>
+            <div class="btn-exp-fed">
+                <button class="explore">Explore Now</button>
+                <button class="feedback">Feedback</button>
+            </div>
+        </div>
+    </div>
+    <div class="our-recipes">
+        <div class="recipes-header">
+            <h1>
+                Our Recipes
+            </h1>
+            <p>Recipes can range from simple, everyday meals to complex, gourmet creations, and they often reflect
+                cultural traditions and personal preferences. They serve as both a guide and inspiration, helping you
+                explore new flavors and cooking techniques.</p>
+        </div>
+        <div class="product">
+            <div class="items-container">
+
+
+                <!-- <div class="item-container">
+                    <img class="item-image" src="images/1.jpg" alt="">
+                    <div class="item-details">
+                        <h3>Spaghetti Carbonara
+                        </h3>
+                        <p>A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
+                    </div>
+                    <div class="recipes-details">
+                        <h4>Ingredinets: 3</h4>
+                        <li class="li-1">200g spaghetti</li>
+                        <li class="li-2">100g pancetta</li>
+                        <li class="li-3">2 large eggs</li>
+                    </div>
+                    <div class="calories">
+                        <span class="time"> <i class="fa-regular fa-clock"></i>10 minutes</span>
+                        <span class="cal-calories"> <i class="fa-solid fa-fire-flame-curved"></i>180 calories</span>
+                    </div>
+                    <button class="want-to-cook">
+                        Want to Cook
+                    </button>
+                </div> -->
+
+
+            </div>
+
+
+            <div class="count-container">
+                <div class="count-section">
+                    <h2>Want to cook: <span id="want-count">0</span></h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Time</th>
+                                <th>Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody id="want-list">
+                            <!-- Empty for now -->
+                            <!--  -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="count-section">
+                    <h2>Currently Cooking: <span id="cooking-count">0</span></h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Time</th>
+                                <th>Calories</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cooking-list">
+                            <!-- Empty for now -->
+                            <!-- <tr>
+                                <td>1</td>
+                                <td>Chicken Stir-Fry Chicken Stir-Fry want-list</td>
+                                <td>10 Minutes</td>
+                                <td>180 Calories</td>
+                                <td></td>
+                            </tr> -->
+                        </tbody>
+                    </table>
+                </div>
+                <div class="total-info">
+                    <p>Total Time = <span id="total-time">0 </span>minutes</p>
+                    <p>Total Calories = <span id="total-calories">0 </span>calories</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="data/data.js"></script>
+    <script src="data/index.js"></script>
+    
+
+</body>
+
+</html>
