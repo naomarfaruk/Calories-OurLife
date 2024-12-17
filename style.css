@@ -371,6 +371,25 @@ body {
 #total-calories {
     color: #333;
 }
+footer {
+    color: white;
+    background-color: #232F3E;
+    border: none;
+    height: 50px;
+}
+
+.copyright {
+    text-align: left;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffffb3;
+    height: 24px;
+    width: 36vw;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
 
 @media screen and (max-width:720px) {
     body {
@@ -500,5 +519,17 @@ body {
 #total-time,
 #total-calories{
     font-size: 14px;
+}
+.copyright {
+    text-align: center;
+    font-size: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffffb3;
+    /* height: 24px; */
+    /* width: 36vw; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 }
