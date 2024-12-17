@@ -97,6 +97,7 @@ body {
     position: relative;
     color: #fafafa;
     margin: auto;
+    z-index: -1;
 
 }
 
@@ -392,6 +393,11 @@ footer {
 }
 
 @media screen and (max-width:720px) {
+    .popup{
+        width: 200px;
+    }
+}
+@media screen and (max-width:720px) {
     body {
         padding: 0 5px;
     }
@@ -531,5 +537,8 @@ footer {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+}
+.popup{
+    width: 400px;
 }
 }
